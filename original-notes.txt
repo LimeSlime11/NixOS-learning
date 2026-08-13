@@ -1,0 +1,39 @@
+exclaimer: all of this was performed on Linux Mint with Cinnamon
+
+install virt-manager
+create machine:
+    Official NixOS Graphical ISO
+    8000GiB RAM
+    3 CPU cores
+    20GB storage
+
+boot machine...
+
+users: (name:password)
+    guest:guest
+    root:root
+
+Disk partitioning:
+    full
+
+finish and reboot
+
+log in as root (so you can omit sudo)
+
+(add virtual machine clipboard sharing)
+add the following code, anywhere inside /etc/nixos/configuration.nix
+    services.spice-vdagentd.enable = true;
+(or)
+    services = {
+        spice-vdagentd.enable = true;
+        # more can go here
+};
+
+then run
+    nixos-rebuild switch
+
+turn off vm and make sure that
+    Virtual hardware details > Display Spice > Type > Spice server
+is set, next boot should share your clipboard now
+
+see files/configuration.nix  
