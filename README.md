@@ -1,5 +1,5 @@
 # NixOS Virtual Machine Setup Guide
-<small> This is a pretty and easy to read guide, generated with AI, from my notes (because I'm not a writer)</small>
+>This is a pretty and easy to read guide, generated with AI, from my notes (included in original-notes.txt), worth reading if something here is fails
 
 > **Environment Note:** This guide was performed and tested on **Linux Mint (Cinnamon)** using **Virt-Manager** (QEMU/KVM).
 
